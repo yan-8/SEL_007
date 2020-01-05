@@ -1,7 +1,10 @@
+package app;
+
+import model.User;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.*;
 
-// все технические подробности спрятаны в этом классе, создаётся Driver и здесь он используется
 public class BookingApp {
     private WebDriver driver;
     private HomePage homePage;

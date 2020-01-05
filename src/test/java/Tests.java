@@ -1,10 +1,11 @@
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import model.DataProviders;
+import model.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
-// тестовый класс "Tests" использует объект BookingApp, который представляет собой Page Object
 @RunWith(DataProviderRunner.class)
 public class Tests extends BaseTest {
     @Test

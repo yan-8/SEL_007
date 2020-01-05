@@ -1,8 +1,9 @@
+package model;
+
 import com.github.javafaker.Faker;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import java.util.Locale;
 
-// тестовые данные
 public class DataProviders {
     private static Faker faker = new Faker(Locale.US);
     private static String email = faker.name().firstName().toLowerCase() + "_" + System.currentTimeMillis() + "@4qmail.com";
