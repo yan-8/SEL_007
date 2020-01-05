@@ -20,13 +20,13 @@ public class BookingApp {
 
     public void registration(User user) {
         homePage.openPage();
-        homePage.registerButton().click();
-        signUpEmailPage.emailField().sendKeys(user.getEmail());
-        signUpEmailPage.getStartedButton().click();
+        homePage.registerButton.click();
+        signUpEmailPage.emailField.sendKeys(user.getEmail());
+        signUpEmailPage.getStartedButton.click();
         signUpPasswordPage.waitUntilCreatePasswordFieldVisible();
-        signUpPasswordPage.createPasswordField().sendKeys(user.getPassword());
-        signUpPasswordPage.confirmPasswordField().sendKeys(user.getPassword());
-        signUpPasswordPage.createAccountButton().click();
+        signUpPasswordPage.createPasswordField.sendKeys(user.getPassword());
+        signUpPasswordPage.confirmPasswordField.sendKeys(user.getPassword());
+        signUpPasswordPage.createAccountButton.click();
         signUpPasswordPage.waitUntilYourAccountTextVisible();
     }
 
