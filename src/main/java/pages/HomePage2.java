@@ -1,9 +1,11 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage2 extends Page {
     public HomePage2(WebDriver driver) {
@@ -15,5 +17,13 @@ public class HomePage2 extends Page {
 
     public void openPage() {
         driver.get("https://www.booking.com");
+    }
+
+    public WebElement popUpWindow() {
+        return driver.findElement(By.xpath(".//div[@id = 'wl252-modal-name']"));
+    }
+
+    public WebElement closePopUpWindow() {
+        return driver.findElement(By.xpath(".//button[@class = 'modal-mask-closeBtn']"));
     }
 }

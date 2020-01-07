@@ -12,11 +12,8 @@ public class Tests extends BaseTest {
     @UseDataProvider(value = "validUser", location = DataProviders.class)
     public void registrationNewUser(User user) {
         bookingApp.registrationOfNewUser(user);
-        assertEquals("Your account", bookingApp.getTextFromElement(".//span[@id = 'profile-menu-trigger--content']"));
-    }
+        assertEquals("Your account", bookingApp.getTextFromUserAccountMenu(".//span[@id = 'profile-menu-trigger--content']"));
 
-//    @Test
-//    public void testMethod() {
-//        bookingApp.registrationOfNewUser();
-//    }
+        bookingApp.clickAllNavigationMenuItems();
+    }
 }

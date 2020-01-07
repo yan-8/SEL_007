@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SignUpEmailPage extends Page {
     public SignUpEmailPage(WebDriver driver) {
@@ -16,4 +17,9 @@ public class SignUpEmailPage extends Page {
     public void openPage() {
         driver.get("http://account.booking.com/register");
     }
+
+    public WebElement waitUntilEmailFieldVisible() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//input[@id = 'login_name_register']")));
+    }
+
 }
